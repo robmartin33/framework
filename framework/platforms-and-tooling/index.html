@@ -1,0 +1,11 @@
+---
+
+layout: default
+
+
+---
+
+{% for vendor in site.vendor-members %}
+	<h3>{{ vendor.name }}</h3>
+	{{ vendor.overview | truncatewords: 50 | markdownify}}<a href="{{ vendor.url }}">read more</a>
+{% endfor %}

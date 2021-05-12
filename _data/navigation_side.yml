@@ -11,6 +11,7 @@
   - name: Capabilities
   - name: Functions
   - name: KPIs
+  - name: Platforms and Tooling
 - name: Challenges
   children:
   - name: Encouraging Engineers to Take Action
