@@ -8,20 +8,14 @@ tag: architecture-refactoring
 # Architecture Refactoring
 
 ## Introduction
-Introduce the framework function within one to two paragraphs. There are more sections below to go into greater detail.
+Architecture Refactoring is the process of making adjustments to an application or infrastructure to change the services used or the application design methodology used to better meet the requirements of the application or infrastructure. In the context of FinOps, the goal of architecture refactoring would typically be to achieve cost savings while maintaining or improving other aspects of the application's performance, reliability, security, resilience, etc. 
 
-Be brief and concise, assume there will be a minimal level of knowledge of the subject area by the reader. There will also be more detailed documentation such as whitepapers on the topic for depth, so focus on the most impactful points.
- 
-The goal here is to ease them into the topic and get them in the right mindset. Things you need to cover:
-- Define the function topic: in 1 sentence explain what it is you are managing/implementing. Consider the following format: Automation replaces repetitive tasks with code.
-- Explain what it does and why its required: add the benefit to the previous sentence. Consider the following format: Automation replaces repetitive tasks with code, this removes operational overhead reducing your costs and allows you to scale faster.
-- Define the main areas of the topic: (if required) list the main areas in order that they need to be considered/implemented, they will be defined/explained later. Consider: Automation has 3 parts: identify , deployment, maintenance reviews.
+Architecture refactoring will typically be called for when using a lift and shift model of cloud migration. Applications which are not optimized to use native cloud services, and which may bring inefficiencies with them into the cloud which may increase costs.
+
+Architecture refactoring may also be done when an organization adopts new models of software development, such as the use of containers or serverless architectures, or when new managed or platform services become available from cloud providers which could replace bespoke architecture components used previously. 
 
 ## Sample Implementation
-Give an example of how the function is implemented in a FinOps practice. Feel free to use images, figures, charts, and/or graphs to explain it.
-
-Place a simple diagram of what a sample implementation or cycle would look like, it should have no more than 12 components in it.
- 
+As an example of architecture refactoring, imagine that an organization is working toward a deadline to close a datacenter, and determines that the best course of action will be to "lift and shift" applications currently running in the datacenter to cloud without modifying their architecture, design or components. One application is a batch application which runs on a dedicated virtual machine in the datacenter several times per day, producing a set of output data from collected logs in its database. If this virtual machine is moved to the public cloud as a running compute or VM instance, it will likely cost the company more to operate 24 hours a day, but will perform as it does on premises. After the datacenter has been closed and all applications moved, an engineering team can return to this application and may determine that the program which runs the batch job can be ported to a serverless model triggered by a time schedule. They may additionally determine that the licensed database which was installed on the server is too costly for the value this application brings, so may choose to instead use a license-included key value database native to the cloud provider instead to reduce costs further. 
 
 ## Common Approaches
 List common approaches for using this function within a FinOps practice.
